@@ -1,1 +1,10 @@
-<monorepo-test-nx-welcome></monorepo-test-nx-welcome>
+<div class="page-container">
+  <h1>Shopping List</h1>
+  <p>Click on an element to change it between lists</p>
+  <div class="lists-container">
+    <monorepo-test-list [title]="'To Buy List'" [elements]="toBuyList$ | async"
+      (onElementClick)="changeCheckedStatus($event)"></monorepo-test-list>
+    <monorepo-test-list [title]="'Bought List'" [elements]="BoughtList$ | async"
+      (onElementClick)="changeCheckedStatus($event)"></monorepo-test-list>
+  </div>
+</div>
